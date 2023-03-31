@@ -30,6 +30,6 @@ resource "aws_db_subnet_group" "default" {
 
   tags       = merge(
     local.common_tags,
-    { Name = "${var.env}-db_subnetgrp" }
+    { name = "${var.env}-db_subnetgrp" }
   )
 }
