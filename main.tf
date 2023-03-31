@@ -25,7 +25,7 @@ resource "aws_security_group" "allow_tls" {
 }
 
 resource "aws_db_subnet_group" "default" {
-  name       = "main"
+  name       = "${var.env}-db_subnetgrp"
   subnet_ids = var.subnet_ids
 
   tags       = merge(
