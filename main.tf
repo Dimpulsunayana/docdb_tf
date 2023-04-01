@@ -24,7 +24,7 @@ resource "aws_security_group" "allow_tls" {
   )
 }
 
-resource "aws_db_subnet_group" "default" {
+resource "aws_docdb_subnet_group" "default" {
   name       = "${var.env}-db_subnetgrp"
   subnet_ids = var.subnet_ids
 
