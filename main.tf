@@ -37,6 +37,8 @@ resource "aws_db_subnet_group" "default" {
 resource "aws_docdb_cluster" "docdb" {
   cluster_identifier      = "${var.env}-db-cluster"
   engine                  = "docdb"
+  master_username         = "dimpul"
+  master_password         = "dimpul123"
   storage_encrypted       = true
 
   tags       = merge(
