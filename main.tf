@@ -35,7 +35,7 @@ resource "aws_db_subnet_group" "default" {
 }
 
 resource "aws_docdb_cluster" "docdb" {
-  cluster_identifier      = "${var.env}-db_cluster"
+  cluster_identifier      = "${var.env}-db-cluster"
   engine                  = "docdb"
   storage_encrypted       = true
 
