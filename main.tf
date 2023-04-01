@@ -33,3 +33,14 @@ resource "aws_db_subnet_group" "default" {
     { name = "${var.env}-db_subnetgrp" }
   )
 }
+
+resource "aws_docdb_cluster" "docdb" {
+  cluster_identifier      = "${var.env}-db_cluster"
+  engine                  = "4.0.0"
+  storage_encrypted       = true
+
+  tags       = merge(
+    local.common_tags,
+    { name = "${var.env}-db_cluster" }
+  )
+}
